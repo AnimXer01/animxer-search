@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateEpisodeButtons();
 
     async function fetchAnimeDetails(animeId) {
-      const primaryApiUrl = `https://api-consumet-org-six.vercel.app/anime/gogoanime/${animeId}`;
-      const fallbackUrl = `https://api.consumet.org/anime/gogoanime/${animeId}`;
+      const primaryApiUrl = `https://animxer-api-seven.vercel.app/anime/gogoanime/${animeId}`;
+      const fallbackUrl = `https://animxer-api-seven.vercel.app/anime/gogoanime/${animeId}`;
 
       try {
         const response = await fetch(primaryApiUrl);
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const anime = await fetchAnimeDetails(baseAnimeId);
       displayAnimeDetails(anime, episodeNumber);
 
-      const apiUrl = `https://api.amvstr.me/api/v2/stream/${episodeId}`;
+      const apiUrl = `https://animxer-api-seven.vercel.app/anim/gogoanime/${episodeId}`;
       console.log(apiUrl);
 
       const data = await fetch(apiUrl);
